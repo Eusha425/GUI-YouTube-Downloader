@@ -9,17 +9,17 @@ progress_display = True
 
 # sending the user input to the youtube downloader
 def send_link():
-    progress.place(y = 180, x = 125)     # display the progress bar for visual representation of the download 
-    youtube_link = name_entry.get()   # getting the user input youtube video link
-    ytd.yt_download(youtube_link)    # passing the link to the downloader 
-    progress_bar()                   # calling the progress bar to add value to it
+    progress.place(y = 180, x = 125)    # display the progress bar for visual representation of the download 
+    youtube_link = name_entry.get()     # getting the user input youtube video link
+    ytd.yt_download(youtube_link)       # passing the link to the downloader 
+    progress_bar()                      # calling the progress bar to add value to it
 
 # deleting user input in the entry widget and resetting progress bar
 def reset_entry():
     global progress_display
-    name_entry.delete(0 , 'end')       # deleting existing text in the entry widget
-    progress["value"] = 0           # resetting progress value to 0
-    if progress_display:             # hiding the progress bar again
+    name_entry.delete(0 , 'end')        # deleting existing text in the entry widget
+    progress["value"] = 0               # resetting progress value to 0
+    if progress_display:                # hiding the progress bar again
         progress.place_forget()
 
 # progress bar update
@@ -33,7 +33,7 @@ def progress_bar():
 # for the temporary text on the entry widget when the user is clicking the entry widget for the first time   
 def on_entry_click(event):   
     global first_click
-    if first_click: # if this is the first time they clicked it
+    if first_click:                 # if this is the first time user clicked it
         first_click = False
         name_entry.delete(0, "end") # delete all the text in the entry
 
