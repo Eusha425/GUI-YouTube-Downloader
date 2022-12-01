@@ -58,7 +58,7 @@ label.pack()
 window.title("Youtube Downloader")
 
 # setting up labels widget for user input
-label = Label(window ,borderwidth = 3, relief = RAISED, text = "Welcome to the YouTube Downloader!", font=("Arial", 15), background = "black", foreground = "white")
+label = Label(window, borderwidth = 3, relief = RAISED, text = "Welcome to the YouTube Downloader!", font = ("Arial", 15), background = "black", foreground = "white")
 label.pack(pady = "10")
 
 # entry label message and user entry
@@ -74,18 +74,18 @@ progress = ttk.Progressbar(window, orient = 'horizontal', mode = 'determinate', 
 
 # submit button
 submit_button = Button(text = "Submit", borderwidth = 2, relief = RIDGE, width = "10", height = "1", command = send_link)
-submit_button.place(y="80",x="325")
+submit_button.place(y = "80", x = "325")
 
 # download again button
 reset_button = Button(text = "Download Again?", borderwidth = 2, relief = RIDGE, width = "15", height = "1", command = reset_entry)
-reset_button.place(y="80",x="105")
+reset_button.place(y = "80", x = "105")
 
 # author label
-author_label = Label(window,borderwidth=3,relief=RAISED, text="Author: Gazi Eusha", font=("Arial", 15),background="black",foreground="white")
-author_label.place(y=345,x=10)
+author_label = Label(window, borderwidth = 3, relief = RAISED, text = "Author: Gazi Eusha", font = ("Arial", 15), background = "black", foreground = "white")
+author_label.place(y = 345, x = 10)
 
 # exit button
-exit_button = Button(text="EXIT",borderwidth = 2, relief = RAISED,font=("Arial", 12, "bold"), width="7", height="1",background="red",fg="black",command=window.destroy)
-exit_button.place(y=345,x=410)
+exit_button = Button(text = "EXIT", borderwidth = 2, relief = RAISED, font = ("Arial", 12, "bold"), width = "7", height = "1", background = "red", fg = "black", command = window.destroy)
+exit_button.place(y = 345, x = 410)
 
 window.mainloop()
