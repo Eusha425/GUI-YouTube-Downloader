@@ -7,14 +7,14 @@ import time
 first_click = True
 progress_display = True
 
-# sending the user input to the youtube downloader
+# sending the user input to the youtube downloader module
 def send_link():
     progress.place(y = 180, x = 125)    # display the progress bar for visual representation of the download 
     youtube_link = name_entry.get()     # getting the user input youtube video link
     ytd.yt_download(youtube_link)       # passing the link to the downloader 
     progress_bar()                      # calling the progress bar to add value to it
 
-# deleting user input in the entry widget and resetting progress bar
+# clearing user input in the entry widget and resetting progress bar
 def reset_entry():
     global progress_display
     name_entry.delete(0 , 'end')        # deleting existing text in the entry widget
@@ -22,9 +22,8 @@ def reset_entry():
     if progress_display:                # hiding the progress bar again
         progress.place_forget()
 
-# progress bar update
+# updating the progress bar
 def progress_bar():
-    # incrementing value to the progress bar
     for i in range(5):
         progress['value'] += 20
         window.update_idletasks()
